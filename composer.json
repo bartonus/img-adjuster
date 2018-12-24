@@ -1,5 +1,5 @@
 {
-    "name": "bartonus/img-adjuster",
+    "name": "imgAdjuster",
 	"keywords": ["log","logging"],
 	"homepage": "https://github.com/bartonus/img-adjuster",
     "description": "Simple image adjuster. You can, resize, crop, change main frame, add watermark with position and alpha settings.",
@@ -14,10 +14,5 @@
     ],
     "require": {
         "php": ">=5.3"
-    },
-    "autoload": {
-        "psr-0": {
-            "imgAdjuster": "src"
-        }
     }
 }
