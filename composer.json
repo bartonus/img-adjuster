@@ -1,0 +1,7 @@
+{
+    "name": "bartonus/img-adjuster",
+    "description": "Simple image adjuster. You can, resize, crop, change main frame, add watermark with position and alpha settings.",
+    "require": {
+        "php": ">=5.6",
+    }
+}
