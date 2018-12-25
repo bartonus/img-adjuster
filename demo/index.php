@@ -4,12 +4,13 @@ include('../src/ImgAdjuster.php');
 include('../src/Config/Config.php');
 include('../src/Config/Destination.php');
 include('../src/Config/Source.php');
+include('../src/Config/Position.php');
 include('../src/Resize/Resize.php');
-include('../src/Resize/Position.php');
 include('../src/Resize/Process.php');
 include('../src/Watermark/Watermark.php');
 
 use bartonus\ImgAdjuster\ImgAdjuster;
+use bartonus\ImgAdjuster\Config\Position;
 use bartonus\ImgAdjuster\Watermark\Watermark;
 use bartonus\ImgAdjuster\Resize\Resize;
 
@@ -21,42 +22,42 @@ try {
 	$imgAdjuster->config()
 		->setBw(false)
 		->setQuality(80)
-		->setWatermark((new Watermark)->setSrc('img/watermark.png')->setPosition('center', 'center'))
-		->setResize((new Resize)->toFit(250, 200)->setPosition('left', 'center'));
+		->setWatermark((new Watermark)->setSrc('img/watermark.png')->setPosition(Position::CENTER, Position::MIDDLE))
+		->setResize((new Resize)->toFit(250, 200)->setPosition(Position::LEFT, Position::MIDDLE));
 	$imgAdjuster->saveAs('img/photo_1.jpg');
 	
-	$imgAdjuster->resize()->setPosition('center', 'center');
+	$imgAdjuster->resize()->setPosition(Position::CENTER, Position::MIDDLE);
 	$imgAdjuster->saveAs('img/photo_2.jpg');
 	
-	$imgAdjuster->resize()->setPosition('right', 'center');
+	$imgAdjuster->resize()->setPosition(Position::RIGHT, Position::MIDDLE);
 	$imgAdjuster->saveAs('img/photo_3.jpg');
-	
+
 	// ROW 2
-	$imgAdjuster->resize()->toFit(250, 300)->setPosition('left', 'center');
-	$imgAdjuster->watermark()->setPosition('center', 'top');
+	$imgAdjuster->resize()->toFit(250, 300)->setPosition(Position::LEFT, Position::MIDDLE);
+	$imgAdjuster->watermark()->setPosition(Position::CENTER, Position::TOP);
 	$imgAdjuster->saveAs('img/photo_4.jpg');
 	
 	$imgAdjuster->config()->setBw(true);
-	$imgAdjuster->resize()->toFit(250, 300)->setPosition('center', 'center');
-	$imgAdjuster->watermark()->setPosition('center', 'center');
+	$imgAdjuster->resize()->toFit(250, 300)->setPosition(Position::CENTER, Position::MIDDLE);
+	$imgAdjuster->watermark()->setPosition(Position::CENTER, Position::MIDDLE);
 	$imgAdjuster->saveAs('img/photo_5.jpg');
 
 	$imgAdjuster->config()->setBw(false);
-	$imgAdjuster->resize()->toFit(250, 300)->setPosition('right', 'center');
-	$imgAdjuster->watermark()->setPosition('center', 'bottom')->setMargin(25, 'px');
+	$imgAdjuster->resize()->toFit(250, 300)->setPosition(Position::RIGHT, Position::MIDDLE);
+	$imgAdjuster->watermark()->setPosition(Position::CENTER, Position::BOTTOM)->setMargin(25, 'px');
 	$imgAdjuster->saveAs('img/photo_6.jpg');
 	
 	// ROW 3
-	$imgAdjuster->resize()->toFit(250, 100)->setPosition('center', 'top');
-	$imgAdjuster->watermark()->setPosition('left', 'bottom')->setSize(20)->setMargin(10, 'px')->setAlpha(100);
+	$imgAdjuster->resize()->toFit(250, 100)->setPosition(Position::CENTER, Position::TOP);
+	$imgAdjuster->watermark()->setPosition(Position::LEFT, Position::BOTTOM)->setSize(20)->setMargin(10, 'px')->setAlpha(100);
 	$imgAdjuster->saveAs('img/photo_7.jpg');
 	
-	$imgAdjuster->resize()->toFit(250, 100)->setPosition('center', 'center');
-	$imgAdjuster->watermark()->setPosition('center', 'bottom');
+	$imgAdjuster->resize()->toFit(250, 100)->setPosition(Position::CENTER, Position::MIDDLE);
+	$imgAdjuster->watermark()->setPosition(Position::CENTER, Position::BOTTOM);
 	$imgAdjuster->saveAs('img/photo_8.jpg');
 	
-	$imgAdjuster->resize()->toFit(250, 100)->setPosition('center', 'bottom');
-	$imgAdjuster->watermark()->setPosition('right', 'bottom');
+	$imgAdjuster->resize()->toFit(250, 100)->setPosition(Position::CENTER, Position::BOTTOM);
+	$imgAdjuster->watermark()->setPosition(Position::RIGHT, Position::BOTTOM);
 	$imgAdjuster->saveAs('img/photo_9.jpg');
 
 }

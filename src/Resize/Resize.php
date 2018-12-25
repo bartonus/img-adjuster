@@ -9,6 +9,8 @@
 
 namespace bartonus\ImgAdjuster\Resize;
 
+use bartonus\ImgAdjuster\Config\Position;
+
 class Resize
 {
 	private $method;
@@ -120,7 +122,7 @@ class Resize
 	 * @return this object
 	 * --
 	 * */
-	public function toFit($x, $y, $crop = true, $bgcolor = false, $positionH = 'center', $positionV = 'center')
+	public function toFit($x, $y, $crop = true, $bgcolor = false, $positionH = Position::CENTER, $positionV = Position::MIDDLE)
 	{
 		$this->setMethod('to_Fit');
 		$this->setX($x);
@@ -135,7 +137,7 @@ class Resize
 	 * --
 	 * Set image main frame it is helpful if you crop toFit()
 	 * --
-	 * @param string (left,center,right), string (top,center,bottom)
+	 * @param string (left,center,right), string (top,middle,bottom)
 	 * @return this object
 	 * --
 	 * */

@@ -10,7 +10,7 @@
 namespace bartonus\ImgAdjuster\Watermark;
 
 use bartonus\ImgAdjuster\Config\Source;
-use bartonus\ImgAdjuster\Resize\Position;
+use bartonus\ImgAdjuster\Config\Position;
 
 class Watermark
 {
@@ -21,7 +21,7 @@ class Watermark
 	private $margin_value = 1;
 	private $margin_type = 'percent';
 	
-	const defaultPosition = ['right', 'bottom'];
+	const defaultPosition = [Position::RIGHT, Position::BOTTOM];
 	
 	public function __construct()
 	{
@@ -119,7 +119,7 @@ class Watermark
 	 * --
 	 * Set watermark position
 	 * --
-	 * @param string (left,right,center), string (top,center,bottom)
+	 * @param string (left,right,center), string (top,middle,bottom)
 	 * @return this object
 	 * --
 	 * */
