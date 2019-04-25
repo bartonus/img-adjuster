@@ -9,9 +9,9 @@ include('../src/Resize/Position.php');
 include('../src/Resize/Process.php');
 include('../src/Watermark/Watermark.php');
 
-use bartonus\ImgAdjuster\ImgAdjuster;
-use bartonus\ImgAdjuster\Watermark\Watermark;
-use bartonus\ImgAdjuster\Resize\Resize;
+use fixmind\ImgAdjuster\ImgAdjuster;
+use fixmind\ImgAdjuster\Watermark\Watermark;
+use fixmind\ImgAdjuster\Resize\Resize;
 
 try {
 

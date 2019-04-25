@@ -1,13 +1,13 @@
 <?php
 
-/*
+/**
  * ImgAdjuster 1.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
- * Project: https://github.com/bartonus/img-adjuster/
+ * Project: https://github.com/fixmind/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster\Resize;
+namespace fixmind\ImgAdjuster\Resize;
 
 class Position
 {

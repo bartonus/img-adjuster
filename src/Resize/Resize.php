@@ -1,13 +1,13 @@
 <?php
 
-/*
+/**
  * ImgAdjuster 1.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
- * Project: https://github.com/bartonus/img-adjuster/
+ * Project: https://github.com/fixmind/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster\Resize;
+namespace fixmind\ImgAdjuster\Resize;
 
 class Resize
 {
@@ -19,7 +19,7 @@ class Resize
 	private $bgcolor;
 	private $position;
 	
-	/*
+	/**
 	 * --
 	 * Set image resolution to fixed X length
 	 * Y length will be calculated proportionally
@@ -37,7 +37,7 @@ class Resize
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set image resolution to fixed Y length
 	 * X length will be calculated proportionally
@@ -55,7 +55,7 @@ class Resize
 		return $this;
 	}
 	
-	/*
+	/**
 	 * --
 	 * Set image resolution to fixed X or Y length
 	 * both length will not be exceeded
@@ -74,7 +74,7 @@ class Resize
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set image resolution to fixed Longer length
 	 * second length will be calculated proportionally
@@ -92,7 +92,7 @@ class Resize
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set image resolution to fixed shorter length
 	 * second length will be calculated proportionally
@@ -110,7 +110,7 @@ class Resize
 		return $this;
 	}
 	
-	/*
+	/**
 	 * --
 	 * Set image strict resolution X & Y
 	 * crop=true => surplus will be cropped
@@ -131,7 +131,7 @@ class Resize
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set image main frame it is helpful if you crop toFit()
 	 * --
@@ -145,7 +145,7 @@ class Resize
 		return $this;
 	}
 	
-	/*
+	/**
 	 * --
 	 * Set crop on/off
 	 * --
@@ -159,7 +159,7 @@ class Resize
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set background when crop is off
 	 * --
@@ -229,7 +229,7 @@ class Resize
 	
 	/* GETTER */
 	
-	/*
+	/**
 	 * --
 	 * Get Resize Method
 	 * --

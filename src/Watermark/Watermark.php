@@ -1,16 +1,16 @@
 <?php
 
-/*
+/**
  * ImgAdjuster 1.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
- * Project: https://github.com/bartonus/img-adjuster
+ * Project: https://github.com/fixmind/img-adjuster
  */
 
-namespace bartonus\ImgAdjuster\Watermark;
+namespace fixmind\ImgAdjuster\Watermark;
 
-use bartonus\ImgAdjuster\Config\Source;
-use bartonus\ImgAdjuster\Resize\Position;
+use fixmind\ImgAdjuster\Config\Source;
+use fixmind\ImgAdjuster\Resize\Position;
 
 class Watermark
 {
@@ -28,7 +28,7 @@ class Watermark
 		$this->position = new Position(self::defaultPosition[0], self::defaultPosition[1]);
 	}
 
-	/*
+	/**
 	 * --
 	 * Set watermark image source
 	 * --
@@ -42,7 +42,7 @@ class Watermark
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set watermark image Alpha
 	 * --
@@ -64,7 +64,7 @@ class Watermark
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set watermark image Margin
 	 * --
@@ -92,7 +92,7 @@ class Watermark
 		return $this;
 	}
 	
-	/*
+	/**
 	 * --
 	 * Set watermark image Size depend on width of main image
 	 * Percent of width main image
@@ -115,7 +115,7 @@ class Watermark
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set watermark position
 	 * --
