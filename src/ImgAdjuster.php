@@ -1,18 +1,18 @@
 <?php
 
 /*
- * ImgAdjuster 1.0.1
+ * ImgAdjuster 2.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/bartonus/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster;
+namespace FixMind\ImgAdjuster;
 
-use bartonus\ImgAdjuster\Config\Config;
-use bartonus\ImgAdjuster\Config\Source;
-use bartonus\ImgAdjuster\Config\Destination;
-use bartonus\ImgAdjuster\Resize\Process;
+use FixMind\ImgAdjuster\Config\Config;
+use FixMind\ImgAdjuster\Config\Source;
+use FixMind\ImgAdjuster\Config\Destination;
+use FixMind\ImgAdjuster\Process\Process;
 
 class ImgAdjuster
 {

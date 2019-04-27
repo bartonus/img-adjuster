@@ -1,15 +1,17 @@
 <?php
 
 /*
- * ImgAdjuster 1.0.1
+ * ImgAdjuster 2.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/bartonus/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster\Resize;
+namespace FixMind\ImgAdjuster\Process;
 
-use bartonus\ImgAdjuster\Config\Position;
+use FixMind\ImgAdjuster\Config\Position;
+use FixMind\ImgAdjuster\Enum\Horizontal;
+use FixMind\ImgAdjuster\Enum\Vertical;
 
 class Resize
 {
@@ -122,7 +124,7 @@ class Resize
 	 * @return this object
 	 * --
 	 * */
-	public function toFit($x, $y, $crop = true, $bgcolor = false, $positionH = Position::CENTER, $positionV = Position::MIDDLE)
+	public function toFit($x, $y, $crop = true, $bgcolor = false, $positionH = false, $positionV = false)
 	{
 		$this->setMethod('to_Fit');
 		$this->setX($x);
@@ -135,9 +137,9 @@ class Resize
 
 	/*
 	 * --
-	 * Set image main frame it is helpful if you crop toFit()
+	 * Set image main frame it is helpfull if you crop toFit()
 	 * --
-	 * @param string (left,center,right), string (top,middle,bottom)
+	 * @param Horizontal or false, Vertical or false
 	 * @return this object
 	 * --
 	 * */

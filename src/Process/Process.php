@@ -1,17 +1,17 @@
 <?php
 
 /*
- * ImgAdjuster 1.0.1
+ * ImgAdjuster 2.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/bartonus/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster\Resize;
+namespace FixMind\ImgAdjuster\Process;
 
-use bartonus\ImgAdjuster\Config\Config;
-use bartonus\ImgAdjuster\Config\Source;
-use bartonus\ImgAdjuster\Config\Destination;
+use FixMind\ImgAdjuster\Config\Config;
+use FixMind\ImgAdjuster\Config\Source;
+use FixMind\ImgAdjuster\Config\Destination;
 
 class Process
 {
@@ -181,9 +181,9 @@ class Process
 			$this->srcMoveX = 0;
 			switch($this->config->getResize()->getPosition()->getPositionV())
 			{
-				case 'top': $this->srcMoveY = 0; break;
-				case 'center': $this->srcMoveY = ($this->srcCutY / 2); break;
-				case 'bottom': $this->srcMoveY = $this->srcCutY; break;
+				case TOP: $this->srcMoveY = 0; break;
+				case MIDDLE: $this->srcMoveY = ($this->srcCutY / 2); break;
+				case BOTTOM: $this->srcMoveY = $this->srcCutY; break;
 			}
 			
 			// modyfikacja
@@ -202,9 +202,9 @@ class Process
 			// ustawienie przesuniecia
 			switch($this->config->getResize()->getPosition()->getPositionH())
 			{
-				case 'left': $this->srcMoveX = 0; break;
-				case 'center': $this->srcMoveX = ($this->srcCutX / 2); break;
-				case 'right': $this->srcMoveX = $this->srcCutX; break;
+				case LEFT: $this->srcMoveX = 0; break;
+				case CENTER: $this->srcMoveX = ($this->srcCutX / 2); break;
+				case RIGHT: $this->srcMoveX = $this->srcCutX; break;
 			}
 			$this->srcMoveY = 0;
 			
@@ -228,17 +228,17 @@ class Process
 		// set image position Horizontal
 		switch($this->config->getResize()->getPosition()->getPositionH())
 		{
-			case 'left': $this->destinationMoveX = 0; break;
-			case 'center': $this->destinationMoveX = ($this->config->getResize()->getX() - $this->destinationScaleX) / 2; break;
-			case 'right': $this->destinationMoveX = ($this->config->getResize()->getX() - $this->destinationScaleX); break;
+			case LEFT: $this->destinationMoveX = 0; break;
+			case CENTER: $this->destinationMoveX = ($this->config->getResize()->getX() - $this->destinationScaleX) / 2; break;
+			case RIGHT: $this->destinationMoveX = ($this->config->getResize()->getX() - $this->destinationScaleX); break;
 		}
 		
 		// set image position Vertical
 		switch($this->config->getResize()->getPosition()->getPositionV())
 		{
-			case 'top': $this->destinationMoveY = 0; break;
-			case 'center': $this->destinationMoveY = ($this->config->getResize()->getY() - $this->destinationScaleY) / 2; break;
-			case 'bottom': $this->destinationMoveY = ($this->config->getResize()->getY() - $this->destinationScaleY); break;
+			case TOP: $this->destinationMoveY = 0; break;
+			case MIDDLE: $this->destinationMoveY = ($this->config->getResize()->getY() - $this->destinationScaleY) / 2; break;
+			case BOTTOM: $this->destinationMoveY = ($this->config->getResize()->getY() - $this->destinationScaleY); break;
 		}
 		
 	}
@@ -264,17 +264,17 @@ class Process
 			// count horizontal position
 			switch($this->config->getWatermark()->getPosition()->getPositionH())
 			{
-				case 'left': $moveX = $margin; break;
-				case 'center': $moveX = ($this->destinationX - $watermarkWidth) / 2; break;
-				case 'right': $moveX = ($this->destinationX - $watermarkWidth - $margin); break;
+				case LEFT: $moveX = $margin; break;
+				case CENTER: $moveX = ($this->destinationX - $watermarkWidth) / 2; break;
+				case RIGHT: $moveX = ($this->destinationX - $watermarkWidth - $margin); break;
 			}
 			
 			// count vertical position			
 			switch($this->config->getWatermark()->getPosition()->getPositionV())
 			{
-				case 'top': $moveY = $margin; break;
-				case 'center': $moveY = ($this->destinationY - $watermarkHeight) / 2; break;
-				case 'bottom': $moveY = ($this->destinationY - $watermarkHeight - $margin); break;
+				case TOP: $moveY = $margin; break;
+				case MIDDLE: $moveY = ($this->destinationY - $watermarkHeight) / 2; break;
+				case BOTTOM: $moveY = ($this->destinationY - $watermarkHeight - $margin); break;
 			}
 			
 			// get img source

@@ -1,16 +1,19 @@
 <?php
 
 /*
- * ImgAdjuster 1.0.1
+ * ImgAdjuster 2.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/bartonus/img-adjuster
  */
 
-namespace bartonus\ImgAdjuster\Watermark;
+namespace FixMind\ImgAdjuster\Watermark;
 
-use bartonus\ImgAdjuster\Config\Source;
-use bartonus\ImgAdjuster\Config\Position;
+use FixMind\ImgAdjuster\Config\Source;
+use FixMind\ImgAdjuster\Config\Position;
+use FixMind\ImgAdjuster\Enum\Horizontal;
+use FixMind\ImgAdjuster\Enum\Vertical;
+use FixMind\ImgAdjuster\Enum\MarginType;
 
 class Watermark
 {
@@ -19,13 +22,16 @@ class Watermark
 	private $size = 50; // width in percent of destination image
 	private $position;
 	private $margin_value = 1;
-	private $margin_type = 'percent';
+	private $margin_type = PERCENT;
 	
-	const defaultPosition = [Position::RIGHT, Position::BOTTOM];
+	const DEFAULT_POSITION = [RIGHT, BOTTOM];
 	
 	public function __construct()
 	{
-		$this->position = new Position(self::defaultPosition[0], self::defaultPosition[1]);
+		$def = self::DEFAULT_POSITION[0];
+		$def2 = self::DEFAULT_POSITION[1];
+		// !!!
+		$this->position = new Position(Horizontal::$def(), Vertical::$def2());
 	}
 
 	/*
@@ -72,21 +78,15 @@ class Watermark
 	 * @return this object
 	 * --
 	 * */
-	public function setMargin($margin, $type = 'percent')
+	public function setMargin($margin, MarginType $type)
 	{
-		if (preg_match('/^(percent|px)$/', $type) == true)
-		{
-			$this->margin_type = $type;
-		}
-		else throw new \Exception('Wrong margin type "'.$type.'", it should be "percent" or "px".');
-	
 		if (is_integer($margin))
 		{
-			if ($margin >= 0 and $margin <= (($type == 'px') ? 1000 : 100))
+			if ($margin >= 0 and $margin <= (($type == MarginType::PX()) ? 1000 : 100))
 			{
 				$this->margin_value = $margin;
 			}
-			else throw new \Exception('Margin value extends possible range. Value should be between 1..' . (($type == 'px') ? 1000 : 100));
+			else throw new \Exception('Margin value extends possible range. Value should be between 1..' . (($type == MarginType::PX()) ? 1000 : 100));
 		}
 		else throw new \Exception('Margin value is not integer.');
 		return $this;
@@ -119,11 +119,11 @@ class Watermark
 	 * --
 	 * Set watermark position
 	 * --
-	 * @param string (left,right,center), string (top,middle,bottom)
+	 * @param Horizontal, Vertical
 	 * @return this object
 	 * --
 	 * */
-	public function setPosition($horizontal, $vertical)
+	public function setPosition(Horizontal $horizontal, Vertical $vertical)
 	{
 		$this->position->setPosition($horizontal, $vertical);
 		return $this;

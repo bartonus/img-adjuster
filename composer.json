@@ -1,8 +1,8 @@
 {
-	"name": "bartonus/img-adjuster",
+	"name": "fixmind/img-adjuster",
 	"type": "library",
 	"keywords": ["image","picture","resample","resize","watermark"],
-	"homepage": "https://github.com/bartonus/img-adjuster",
+	"homepage": "https://github.com/fixmind/img-adjuster",
 	"description": "Simple image adjuster. You can, resize, crop, change main frame, add watermark with position and alpha settings.",
 	"license": "MIT",
 	"authors": [
@@ -18,7 +18,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"bartonus\\ImgAdjuster\\": "src/"
+			"FixMind\\ImgAdjuster\\": "src/"
 		}
 	}
 }
