@@ -1,16 +1,16 @@
 <?php
 
-/*
+/**
  * ImgAdjuster 1.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
- * Project: https://github.com/bartonus/img-adjuster/
+ * Project: https://github.com/fixmind/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster\Config;
+namespace fixmind\ImgAdjuster\Config;
 
-use bartonus\ImgAdjuster\Resize\Resize;
-use bartonus\ImgAdjuster\Watermark\Watermark;
+use fixmind\ImgAdjuster\Resize\Resize;
+use fixmind\ImgAdjuster\Watermark\Watermark;
 
 class Config
 {
@@ -25,7 +25,7 @@ class Config
 		$this->watermark = new Watermark();
 	}
 
-	/*
+	/**
 	 * --
 	 * Set resizer
 	 * --
@@ -39,7 +39,7 @@ class Config
 		return $this;
 	}
 
-	/*
+	/**
 	 * --
 	 * Set watermark
 	 * --
@@ -53,7 +53,7 @@ class Config
 		return $this;
 	}
 	
-	/*
+	/**
 	 * --
 	 * Set black&white mode
 	 * --
@@ -67,7 +67,7 @@ class Config
 		return $this;
 	}
 	
-	/*
+	/**
 	 * --
 	 * Set quality destination image
 	 * --

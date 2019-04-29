@@ -1,24 +1,29 @@
 {
-	"name": "bartonus/img-adjuster",
-	"type": "library",
-	"keywords": ["image","picture","resample","resize","watermark"],
-	"homepage": "https://github.com/bartonus/img-adjuster",
-	"description": "Simple image adjuster. You can, resize, crop, change main frame, add watermark with position and alpha settings.",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Michal Barcikowski",
-			"email": "b@rton.it",
-			"homepage": "https://www.webton.pl",
-			"role": "Developer"
+	"name" : "fixmind/img-adjuster",
+	"type" : "library",
+	"keywords" : [
+		"image",
+		"picture",
+		"resample",
+		"resize",
+		"watermark"
+	],
+	"homepage" : "https://github.com/fixmind/img-adjuster",
+	"description" : "Simple image adjuster. You can, resize, crop, change main frame, add watermark with position and alpha settings.",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Michal Barcikowski",
+			"email" : "b@rton.it",
+			"homepage" : "https://www.webton.pl",
+			"role" : "Developer"
 		}
 	],
-	"require": {
-		"php": ">=5.3"
+	"require" : {
+		"php" : ">=5.3"
 	},
-	"autoload": {
-		"psr-4": {
-			"bartonus\\ImgAdjuster\\": "src/"
+	"autoload" : {
+		"psr-4" : {
+			"fixmind\\ImgAdjuster\\" : "src/"
 		}
 	}
 }

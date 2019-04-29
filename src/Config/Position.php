@@ -7,7 +7,7 @@
  * Project: https://github.com/bartonus/img-adjuster/
  */
 
-namespace bartonus\ImgAdjuster\Config;
+namespace fixmind\ImgAdjuster\Config;
 
 class Position
 {
