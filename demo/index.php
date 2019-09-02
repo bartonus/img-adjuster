@@ -1,6 +1,7 @@
 <?php
 
-include('../src/Enum/Enum.php');
+include('../vendor/fixmind/enum/src/EnumCore.php');
+include('../vendor/fixmind/enum/src/Enum.php');
 include('../src/Enum/MarginType.php');
 include('../src/Enum/Vertical.php');
 include('../src/Enum/Horizontal.php');
@@ -14,13 +15,7 @@ include('../src/Config/Position.php');
 include('../src/Process/Resize.php');
 include('../src/Watermark/Watermark.php');
 
-<<<<<<< HEAD
-
-use fixmind\ImgAdjuster\ImgAdjuster;
-use fixmind\ImgAdjuster\Config\Position;
-use fixmind\ImgAdjuster\Watermark\Watermark;
-use fixmind\ImgAdjuster\Resize\Resize;
-=======
+use FixMind\Enum;
 use FixMind\ImgAdjuster\ImgAdjuster;
 use FixMind\ImgAdjuster\Config\Position;
 use FixMind\ImgAdjuster\Watermark\Watermark;
@@ -28,7 +23,6 @@ use FixMind\ImgAdjuster\Process\Resize;
 use FixMind\ImgAdjuster\Enum\Vertical;
 use FixMind\ImgAdjuster\Enum\Horizontal;
 use FixMind\ImgAdjuster\Enum\MarginType;
->>>>>>> enumVersion
 
 try {
 

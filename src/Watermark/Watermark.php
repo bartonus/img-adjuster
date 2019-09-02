@@ -1,8 +1,8 @@
 <?php
 
 /*
- * ImgAdjuster 2.0.1
- * Copyright 2018 Michal Barcikowski
+ * ImgAdjuster 3.0.1
+ * Copyright 2019 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/fixmind/img-adjuster
  */
@@ -28,10 +28,9 @@ class Watermark
 	
 	public function __construct()
 	{
-		$def = self::DEFAULT_POSITION[0];
-		$def2 = self::DEFAULT_POSITION[1];
-		// !!!
-		$this->position = new Position(Horizontal::$def(), Vertical::$def2());
+		$defH = self::DEFAULT_POSITION[0];
+		$defV = self::DEFAULT_POSITION[1];
+		$this->position = new Position(Horizontal::$defH(), Vertical::$defV());
 	}
 
 	/**

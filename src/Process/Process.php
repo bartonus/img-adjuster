@@ -1,8 +1,8 @@
 <?php
 
 /*
- * ImgAdjuster 2.0.1
- * Copyright 2018 Michal Barcikowski
+ * ImgAdjuster 3.0.1
+ * Copyright 2019 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/fixmind/img-adjuster/
  */
@@ -86,7 +86,7 @@ class Process
 	private function countResize($method = false)
 	{
 		// check if source is big enough
-		// !!! trzeba dorobic sprawdzenie
+		// TO DO !!!
 		$this->destinationResize = true;
 		
 		// count size of image destination
