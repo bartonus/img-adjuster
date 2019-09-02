@@ -1,16 +1,16 @@
 <?php
 
-/**
- * ImgAdjuster 1.0.1
+/*
+ * ImgAdjuster 2.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/fixmind/img-adjuster/
  */
 
-namespace fixmind\ImgAdjuster\Config;
+namespace FixMind\ImgAdjuster\Config;
 
-use fixmind\ImgAdjuster\Resize\Resize;
-use fixmind\ImgAdjuster\Watermark\Watermark;
+use FixMind\ImgAdjuster\Process\Resize;
+use FixMind\ImgAdjuster\Watermark\Watermark;
 
 class Config
 {

@@ -1,18 +1,18 @@
 <?php
 
-/**
- * ImgAdjuster 1.0.1
+/*
+ * ImgAdjuster 2.0.1
  * Copyright 2018 Michal Barcikowski
  * Available via the MIT or new BSD @license.
  * Project: https://github.com/fixmind/img-adjuster/
  */
 
-namespace fixmind\ImgAdjuster;
+namespace FixMind\ImgAdjuster;
 
-use fixmind\ImgAdjuster\Config\Config;
-use fixmind\ImgAdjuster\Config\Source;
-use fixmind\ImgAdjuster\Config\Destination;
-use fixmind\ImgAdjuster\Resize\Process;
+use FixMind\ImgAdjuster\Config\Config;
+use FixMind\ImgAdjuster\Config\Source;
+use FixMind\ImgAdjuster\Config\Destination;
+use FixMind\ImgAdjuster\Process\Process;
 
 class ImgAdjuster
 {
